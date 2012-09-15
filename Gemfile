@@ -7,6 +7,7 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 
+gem 'execjs'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,6 +19,23 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test, :development do 
+  gem 'rspec-rails', '~> 2.5'
+end
+
+group :development do
+  # To use debugger
+  gem 'linecache19', '0.5.13', :path => '~/.rvm/gems/ruby-1.9.3-p194/gems/linecache19-0.5.13/'
+  gem 'ruby-debug-base19x', '0.11.30.pre10', :path => '~/.rvm/gems/ruby-1.9.3-p194/gems/ruby-debug-base19x-0.11.30.pre10/'
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
 end
 
 gem 'jquery-rails'
@@ -34,5 +52,7 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :production do
+  gem 'therubyracer'
+end
+
