@@ -74,6 +74,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.0.0)
+      activesupport (>= 3.0.0)
     ffi (1.1.5)
     gherkin (2.11.2)
       json (>= 1.4.6)
@@ -183,6 +185,7 @@ DEPENDENCIES
   database_cleaner
   dynamic_form
   execjs
+  factory_girl (~> 4.0)
   jquery-rails
   linecache19 (= 0.5.13)!
   rails (= 3.2.3)
